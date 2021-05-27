@@ -1,0 +1,501 @@
+/* 
+Theme Name: myThemes
+Author: TaishiOhmoto
+Description: This is my original theme.
+Version: 1.0
+*/
+
+body{
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  position: relative;
+  background-color: dimgray;
+  color: white;
+}
+
+
+header{
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+
+h4{
+  margin: 3rem 0;
+  text-align: center;
+}
+
+
+
+.logoImage{
+  float: left;
+}
+
+.logo{
+  margin: 0;
+  padding:  3vh;
+  font-size: 4vh;
+  font-weight: 600;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  /* 仮 */
+}
+
+.menu{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  margin-right: 1.1vw;
+}
+
+.menu-item{
+  padding: 3.5vh;
+}
+
+.menu-item a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1vw;
+}
+
+/* mobile navigation */
+
+#nav-drawer{
+  display: none;
+}
+
+
+.headerWrapper{
+  background-image: url(images/Resumptio.png);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  margin-right: 20vw;
+}
+
+.headerWrapper::before{
+  /* 透過した黒を上から重ねるイメージ */
+  background-color: rgba(0,0,0,0.4);
+  /* 自由に位置指定 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+
+.headerText{
+  position: relative;
+}
+
+.headerText h2{
+  font-size: 6.5vw;
+  font-weight: 600;
+  color: white;
+  
+}
+
+.text1{
+  position: absolute;
+  top: 27vh;
+  right: -13vw;
+
+  animation: SlideIn 2s;
+}
+
+.text2{
+  position: absolute;
+  top: 47vh;
+  right: -13vw;
+
+  animation: SlideIn 2s;
+}
+
+.text3{
+  position: absolute;
+  top:70vh;
+  right: -4vh;
+  font-size: 1.2vw;
+
+  animation: SlideIn 2s;
+}
+
+@keyframes SlideIn{
+  0% {
+    opacity: 0;/*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.aboutWrapper{
+  position: relative;
+}
+
+.topButton{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 3px;
+  background-color: black;
+  z-index: 2;
+
+  width: 50px;
+  height: 50px;
+  padding: 15px 8px;
+}
+
+.topButton a{
+  color: white;
+  text-decoration: none;
+}
+
+.topText{
+  text-align: center;
+  padding: 5.5rem;
+}
+
+.topText h3{
+  font-size: 6vh;
+  font-weight: 600;
+}
+
+.aboutMe{
+  margin-left: 20vw;
+  padding: 5vw;
+
+  position: relative;
+}
+
+.aboutMe::before{
+  background-color:#ffc107;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  transition: 0.7s;
+}
+
+/* 条件を満たしたあとに追加するクラス */
+.aboutMeMove::before{
+  background-color:#ffc107;
+  width: 100%;
+}
+
+.fadeIn{
+  opacity:1;
+  
+}
+
+.textMe{
+  margin-left: 25vw;
+  color: black;
+  position: relative;
+
+}
+
+.textMe h5{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.textMe p{
+  font-size: 2vh;
+}
+
+.imgMe{
+  position: relative;
+}
+
+.imgMe img{
+  position: absolute;
+  top: 5vw;
+  left: -11vw;
+  width: 30vw;
+}
+
+.snsIcon{
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+
+.subheading{
+  margin-bottom:70px;
+  margin-top: 70px;
+  text-align : center;
+}
+
+.subcontent{
+  opacity: 0;
+}
+
+.subBody{
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: black;
+  background: white;
+  border-top: solid 10px #ffc107 ;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  border-radius: 0 0 5px 5px;
+}
+
+.thumBox{
+  text-align: center;
+}
+
+
+.thumBox img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+  transition: 0.7s;	
+}
+
+.thumBox img:hover{
+  box-shadow: 0 15px 30px -5px
+  rgb(194, 169, 30), 0 0 5px 
+  rgba(0,0,0,.1);
+  transform: translateY(-4px);
+  transition: 0.7s;	
+}
+
+.workButton{
+  text-align: center;
+}
+
+.btnAnime{
+  background-color:#ffc107;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.contactBody{
+  text-align: center;
+  margin: 0 20vw;
+}
+
+footer{
+  background-color: black;
+}
+
+footer small{
+  display: block;
+  text-align: center;
+}
+
+
+/* bergermenu */
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: white;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;/*最前面に*/
+  width: 20vh;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background:#ffc107 ;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(308%);
+  transform: translateX(308%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+/* single.php */
+
+.link-box{
+  display: flex;
+  justify-content: center;
+}
+
+.link-mg{
+  margin: 8vh;
+}
+
+.link-mg a{
+  font-size: 3vh;
+  color: white;
+}
+
+/* page.php */
+
+.winHeight{
+  height: 100vh;
+}
+
+main{
+  text-align: center;
+  padding-top: 15vh;
+}
+
+main h2{
+  margin-bottom: 5vh;
+}
+
+
+/* タブレット用のサイズ */
+@media screen and (max-width: 1024px) {
+
+  .menu{
+    display: block;
+    margin-right: 10vh;
+    padding: 0;
+  }
+
+  .menu-item a{
+    font-size: 4.1vw;
+  }
+
+  #nav-drawer{
+    display: block;
+    text-align: right;
+    padding: 4vh;
+  }
+
+  .headerText h2{
+    font-size: 10.5vw;
+  }
+
+
+  .text1{
+    top: 38vh;
+  }
+
+  .text2{
+    top: 52vh;
+  }
+
+  .text3{
+    right: -7vh;
+    font-size: 2.2vw;
+  }
+
+  #pc-nav{
+    display: none;
+  }
+
+  .winHeight{
+    height: 100vh;
+  }
+
+}
+
+  /*スマートホン向記述*/
+@media only screen and (max-width: 599px) {
+
+  .headerWrapper{
+    margin-right: 0;
+    background-position: right 75% bottom 100%;
+    background-size:  auto;
+  }
+
+  .text1{
+    right: 4vh;
+  }
+
+  .text2{
+    right: 9vh;
+  }
+
+  .text3{
+    right: 4vh;
+    font-size: 4.2vw;
+    text-align: center;
+  }
+
+  .textMe {
+    margin-left: 0;
+  }
+
+  .imgMe img{
+    top: 13vw;
+    left: 39vw;
+  }
+
+  .aboutMe{
+    margin-left: 0;
+  }
+
+  .winHeight{
+    height: auto;
+  }
+  
+}
